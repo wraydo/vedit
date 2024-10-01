@@ -1,0 +1,47 @@
+img {
+    width: 200px;
+    border-radius: 10px;
+  }
+
+  .nav-link {
+    text-decoration: none; 
+    color: rgb(220, 233, 219);
+  }
+
+  .logo{
+    width: 200px;
+  }
+
+  .nav{
+    display: flex;
+    justify-content: center;
+  }
+
+  .img-container{
+    margin-right: 50px;
+  }
+
+.img2-container{
+    height: 300px;
+}
+
+.disc{
+    width: 500px;
+    height: 300px;
+}
+.img2-container{
+  margin: 1%;
+    margin-bottom: 1%;
+}
+
+.img3-container{
+    height: 300px;
+}
+.cid{
+    width: 500px;
+    height: 300px;
+}
+.img3-container{
+    margin: 1%;
+    margin-bottom: 1%;
+}
