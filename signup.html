@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/loginstyle.css" />
+
+    <title>Vinyl123</title>
+    <style>
+      header {
+        background-image: url(images/VinylMePlease.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container-fluid">
+      <div class="img-container">
+        <img src="./images/logoipsum-311.svg" alt="" class="logo" />
+      </div>
+      <ul class="nav nav-underline align-content-center">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="signin.html" class="nav-link">Sign In</a></li>
+        <li><a href="checkout.html" class="nav-link">Checkout</a></li>
+      </ul>
+    </header>
+
+    <section class="container">
+      <form action="action_page.php">
+        <div>
+          <h1>Sign Up</h1>
+          <p>Create an account.</p>
+          <hr />
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="email" class="formr" required />
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" class="formx" required />
+
+          <label for="psw-repeat"><b>Re-enter Password</b></label>
+          <input
+            type="password"
+            placeholder="Re-enter Password"
+            name="psw-repeat"
+            id="psw-repeat"
+            class="formq"
+            required
+          />
+          <hr />
+
+          <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+          <button type="submit" class="registerbtn formd">Register</button>
+        </div>
+
+        <div class="container signin">
+          <p>Already have an account? <a href="signin.html">Sign In</a>.</p>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
