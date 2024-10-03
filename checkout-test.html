@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+
+    <title>Vinyl123</title>
+    <style>
+      header {
+        background-image: url(images/VinylMePlease.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container-fluid">
+      <div class="img-container">
+        <img src="./images/logoipsum-311.svg" alt="" class="logo" />
+      </div>
+      <ul class="nav nav-underline align-content-center">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="signin.html" class="nav-link">Sign In</a></li>
+        <li><a href="checkout.html" class="nav-link">Checkout</a></li>
+        <li><a href="checkout-example.html" class="nav-link">Checkout Example</a></li>
+      </ul>
+    </header>
+
+    <main class="container">
+      <div class="container">
+        <div >
+            <h3>Billing Address</h3>
+            <form class="p-4" style="margin-top:10px">
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="fname"> Name</label>
+                    <input  type="text" id="fname" name="firstname" placeholder="Full Name">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="john@example.com">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <label for="adr">Address</label>
+                  <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" />
+                </div>
+                <div class="col-6">
+                  <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="New York" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" placeholder="NY" />
+                </div>
+                <div class="col-6">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="zip" placeholder="10001" />
+                </div>
+              </div>
+              <div>
+
+             </div>
+            </form>
+          </div>
+
+              <div >
+                <h3>Payment</h3>
+                <h5>Accepted Cards</h5>
+                <img src="images/accptcards.jpg" alt="">
+                <form class="" style="margin-top:10px">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="fname">Credit Card Number</label>
+                        <input  type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="expmonth">Expiration Month</label>
+                        <input type="text" id="expmonth" name="email" placeholder="August">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="expyear">Expiration Year</label>
+                        <input  type="text" id="expyear" name="expyear" placeholder="2022">
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="300"> 
+                      </div>
+                      <div>
+                        <!-- <button type="submit" class="checkoutbtn formt" style="background-color: aqua(0, 0, 0)rgb(0, 0, 0); border-radius: 10%;color: rgb(10, 10, 10) ; ">Checkout</button> -->
+                      </div>
+                    </div>
+                  </div>
+                </form>
+      </div>
+    </main>
+  </body>
+</html>
