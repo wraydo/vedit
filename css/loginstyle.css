@@ -129,7 +129,45 @@ a {
 }
 
 
+/* Card Styling */
+.card {
+  width: 24rem;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px; /* Slight rounding on the card edges */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06); /* Adds a subtle shadow */
+  background-color: white; /* Ensures card has a white background */
+}
 
+/* Input Fields */
+.card input {
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px; /* Rounded input fields */
+  border: 1px solid #ccc; /* Subtle border for inputs */
+}
 
+/* Button */
+.registerbtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px; /* Rounded button */
+  background-color: #007bff; /* Default button color */
+  color: white; /* Button text color */
+  border: none; /* Removes border */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06); /* Shadow on the button */
+}
 
+.registerbtn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
 
+/* Sign-in Message */
+.signin {
+  text-align: center;
+  margin-top: 20px;
+}
