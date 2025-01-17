@@ -1,65 +1,61 @@
 img {
-    width: 200px;
-    border-radius: 10px;
-  }
-
-  .nav-link {
-    text-decoration: none; 
-    color: rgb(220, 233, 219);
-  }
-
-  .logo{
-    width: 200px;
-  }
-
-  .nav{
-    display: flex;
-    justify-content: center;
-  }
-
-  .img-container{
-    margin-right: 50px;
-  }
-
-.img2-container{
-    height: 300px;
+  width: 200px;
+  border-radius: 10px;
 }
 
-.disc{
-    width: 500px;
-    height: 300px;
+.nav-link {
+  text-decoration: none;
+  color: rgb(220, 233, 219);
 }
-.img2-container{
+
+.logo {
+  width: 200px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.img-container {
+  margin-right: 50px;
+}
+
+.img2-container {
+  height: 300px;
+}
+
+.disc {
+  width: 500px;
+  height: 300px;
+}
+.img2-container {
   margin: 1%;
-    margin-bottom: 1%;
+  margin-bottom: 1%;
 }
 
-.img3-container{
-    height: 300px;
+.img3-container {
+  height: 300px;
 }
-.cid{
-    width: 500px;
-    height: 300px;
+.cid {
+  width: 500px;
+  height: 300px;
 }
-.img3-container{
-    margin: 1%;
-    margin-bottom: 1%;
+.img3-container {
+  margin: 1%;
+  margin-bottom: 1%;
 }
-/* styles sign up */
 
+* {
+  box-sizing: border-box;
+}
 
-* {box-sizing: border-box}
-
-/* Add padding to containers */
 .container {
   padding: 16px;
 }
 
-/* styles for my form */
-
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -68,18 +64,17 @@ input[type=text], input[type=password] {
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   background-color: #ddd;
   outline: none;
 }
 
-/* Overwrite default styles of hr */
 hr {
   border: 1px solid #3d3939;
   margin-bottom: 25px;
 }
 
-/* Set a style for the submit/register button */
 .registerbtn {
   background-color: #3c6dd6;
   color: rgb(245, 237, 237);
@@ -92,81 +87,73 @@ hr {
 }
 
 .registerbtn:hover {
-  opacity:1;
+  opacity: 1;
 }
 
-/* Add a blue text color to links */
 a {
   color: rgba(25, 140, 255, 0.575);
 }
 
-/* Set a grey background color and center the text of the "sign in" section */
 .signin {
   background-color: #fffafa;
   text-align: center;
 }
-/* styles bubbles */
-.formr{
-    border: 2px solid red;
-  padding: 10px;
-  border-radius: 25px;
-  
-}
-.formx{
-    border: 2px solid red;
+
+.formr {
+  border: 2px solid red;
   padding: 10px;
   border-radius: 25px;
 }
-.formq{
-    border: 2px solid red;
+.formx {
+  border: 2px solid red;
   padding: 10px;
   border-radius: 25px;
 }
-.formd{
-    border: 2px solid rgb(26, 25, 25);
+.formq {
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 25px;
+}
+.formd {
+  border: 2px solid rgb(26, 25, 25);
   padding: 10px;
   border-radius: 25px;
 }
 
-
-/* Card Styling */
 .card {
   width: 24rem;
   text-align: center;
   padding: 20px;
-  border-radius: 10px; /* Slight rounding on the card edges */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06); /* Adds a subtle shadow */
-  background-color: white; /* Ensures card has a white background */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06);
+  background-color: white;
 }
 
-/* Input Fields */
 .card input {
   margin: 10px 0;
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
-  border-radius: 20px; /* Rounded input fields */
-  border: 1px solid #ccc; /* Subtle border for inputs */
+  border-radius: 20px;
+  border: 1px solid #ccc;
 }
 
-/* Button */
 .registerbtn {
   margin-top: 20px;
   width: 100%;
   padding: 10px;
-  border-radius: 20px; /* Rounded button */
-  background-color: #007bff; /* Default button color */
-  color: white; /* Button text color */
-  border: none; /* Removes border */
-  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.06); /* Shadow on the button */
 }
 
 .registerbtn:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #0056b3;
 }
 
-/* Sign-in Message */
 .signin {
   text-align: center;
   margin-top: 20px;
