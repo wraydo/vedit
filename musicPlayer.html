@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.css" >
+    <link rel="stylesheet" href="./css/player.css">
+    <script defer src ="./script/musicPlayer.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Music Application</title>
+</head>
+<body>
+    <div id="container">
+
+
+        <div class="left">
+            <div class="split1">
+               <button id="exclamation" onclick="userInfo()"><i  class="fa-solid fa-exclamation"></i></button> 
+                <section class="info">
+                <p id="title">title </p>
+                <p id="artist">artist</p>
+                </section>
+               
+                <section class="trackInfo">
+                    <p id="currentSong">0</p>
+                    <p id="slash">/</p>
+                    <p id="total">5</p>
+                </section>
+
+                <div id="imagePlacement"></div>
+
+                <div class="buttonClass">
+                    <button id="shuffle" onclick="shuffle()"><i class="fa fa-shuffle"></i></button>
+                <button id="previous" onclick="previously()"><i class="fa fa-step-backward"></i></button>
+                <button id="play" onclick="playTheSound()"><i class="fa fa-play"></i></button>
+    
+                <button id="next" onclick="skipNext()"><i class="fa fa-step-forward"></i></button>
+                <button id="loop" onclick="loop()"><i class="fa fa-repeat"></i></button>
+            </div>
+               
+                <div class="buttonClass-mobile">
+                    <button id="shuffle" onclick="shuffle()"><i class="fa fa-shuffle"></i></button>
+                    <button id="previous" onclick="previously()"><i class="fa fa-step-backward"></i></button>
+                    <button id="playMobile" onclick="playTheSound()"><i class="fa fa-play"></i></button>
+                    <button id="next" onclick="skipNext()"><i class="fa fa-step-forward"></i></button>
+                    <!-- <button id="loop" onclick="loop()"><i class="fa fa-repeat"></i></button> -->
+                    
+                </div>
+                
+            </div>
+        
+            <!-- <button id="toggleRotation">Toggle Rotation</button> -->
+        </div>
+
+        
+
+</body>
+</html>
