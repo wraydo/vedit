@@ -3,11 +3,11 @@
   <head>
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <link rel="stylesheet" href="./css/custom.css" />
-    <link rel="stylesheet" href="./css/player.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.css" >
-<script defer src="./script/musicPlayer.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/player.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.css" />
+    <script defer src="./script/musicPlayer.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Vinyl123</title>
     <style>
       header {
@@ -19,13 +19,142 @@
       .nav-link {
         color: rgb(255, 255, 255) !important;
       }
+      /* From Uiverse.io by JkHuger */ 
+.wave-menu {
+  border: 4px solid #030303;
+  border-radius: 50px;
+  width: 200px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: ease 0.2s;
+  position: relative;
+  background: #fff;
+}
+
+.wave-menu li {
+  list-style: none;
+  height: 30px;
+  width: 4px;
+  border-radius: 10px;
+  background: #393c55;
+  margin: 0 6px;
+  padding: 0;
+  animation-name: wave1;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: ease 0.2s;
+}
+
+.wave-menu:hover > li {
+  background: #fff;
+}
+
+.wave-menu:hover {
+  background: #2c2d41;
+}
+
+.wave-menu li:nth-child(2) {
+  animation-name: wave2;
+  animation-delay: 0.2s;
+}
+
+.wave-menu li:nth-child(3) {
+  animation-name: wave3;
+  animation-delay: 0.23s;
+  animation-duration: 0.4s;
+}
+
+.wave-menu li:nth-child(4) {
+  animation-name: wave4;
+  animation-delay: 0.1s;
+  animation-duration: 0.3s;
+}
+
+.wave-menu li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.wave-menu li:nth-child(6) {
+  animation-name: wave2;
+  animation-duration: 0.5s;
+}
+
+.wave-menu li:nth-child(8) {
+  animation-name: wave4;
+  animation-delay: 0.4s;
+  animation-duration: 0.25s;
+}
+
+.wave-menu li:nth-child(9) {
+  animation-name: wave3;
+  animation-delay: 0.15s;
+}
+
+@keyframes wave1 {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0.5);
+  }
+}
+
+@keyframes wave2 {
+  from {
+    transform: scaleY(0.3);
+  }
+
+  to {
+    transform: scaleY(0.6);
+  }
+}
+
+@keyframes wave3 {
+  from {
+    transform: scaleY(0.6);
+  }
+
+  to {
+    transform: scaleY(0.8);
+  }
+}
+
+@keyframes wave4 {
+  from {
+    transform: scaleY(0.2);
+  }
+
+  to {
+    transform: scaleY(0.5);
+  }
+}
+
     </style>
   </head>
   <body>
     <header class="container-fluid d-flex flex-column align-items-center">
-      <div class="img-container mb-3 mt-2">
+      <ul class="wave-menu mt-3 mb-3">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <!-- <div class="img-container mb-3 mt-2">
         <img src="./images/logoipsum-311.svg" alt="" class="logo" />
-      </div>
+      </div> -->
       <form class="d-flex justify-content-center w-100" role="search">
         <input class="form-control w-25 me-2" type="search" placeholder="Search" aria-label="Search" />
         <button class="btn bg-dark-subtle" type="submit">Search</button>
@@ -82,46 +211,43 @@
 
       <section id="playlist">
         <div id="container">
-
-
           <div class="left">
-              <div class="split1">
-                 <button id="exclamation" onclick="userInfo()"><i  class="fa-solid fa-exclamation"></i></button> 
-                  <section class="info">
-                  <p id="title">title </p>
-                  <p id="artist">artist</p>
-                  </section>
-                 
-                  <section class="trackInfo">
-                      <p id="currentSong">0</p>
-                      <p id="slash">/</p>
-                      <p id="total">5</p>
-                  </section>
-  
-                  <div id="imagePlacement"></div>
-  
-                  <div class="buttonClass">
-                      <button id="shuffle" onclick="shuffle()"><i class="fa fa-shuffle"></i></button>
-                  <button id="previous" onclick="previously()"><i class="fa fa-step-backward"></i></button>
-                  <button id="play" onclick="playTheSound()"><i class="fa fa-play"></i></button>
-      
-                  <button id="next" onclick="skipNext()"><i class="fa fa-step-forward"></i></button>
-                  <button id="loop" onclick="loop()"><i class="fa fa-repeat"></i></button>
+            <div class="split1">
+              <button id="exclamation" onclick="userInfo()"><i class="fa-solid fa-exclamation"></i></button>
+              <section class="info">
+                <p id="title">title</p>
+                <p id="artist">artist</p>
+              </section>
+
+              <section class="trackInfo">
+                <p id="currentSong">0</p>
+                <p id="slash">/</p>
+                <p id="total">5</p>
+              </section>
+
+              <div id="imagePlacement"></div>
+
+              <div class="buttonClass">
+                <button id="shuffle" onclick="shuffle()"><i class="fa fa-shuffle"></i></button>
+                <button id="previous" onclick="previously()"><i class="fa fa-step-backward"></i></button>
+                <button id="play" onclick="playTheSound()"><i class="fa fa-play"></i></button>
+
+                <button id="next" onclick="skipNext()"><i class="fa fa-step-forward"></i></button>
+                <button id="loop" onclick="loop()"><i class="fa fa-repeat"></i></button>
               </div>
-                 
-                  <div class="buttonClass-mobile">
-                      <button id="shuffle" onclick="shuffle()"><i class="fa fa-shuffle"></i></button>
-                      <button id="previous" onclick="previously()"><i class="fa fa-step-backward"></i></button>
-                      <button id="playMobile" onclick="playTheSound()"><i class="fa fa-play"></i></button>
-                      <button id="next" onclick="skipNext()"><i class="fa fa-step-forward"></i></button>
-                      <!-- <button id="loop" onclick="loop()"><i class="fa fa-repeat"></i></button> -->
-                      
-                  </div>
-                  
+
+              <div class="buttonClass-mobile">
+                <button id="shuffle" onclick="shuffle()"><i class="fa fa-shuffle"></i></button>
+                <button id="previous" onclick="previously()"><i class="fa fa-step-backward"></i></button>
+                <button id="playMobile" onclick="playTheSound()"><i class="fa fa-play"></i></button>
+                <button id="next" onclick="skipNext()"><i class="fa fa-step-forward"></i></button>
+                <!-- <button id="loop" onclick="loop()"><i class="fa fa-repeat"></i></button> -->
               </div>
-          
-              <!-- <button id="toggleRotation">Toggle Rotation</button> -->
+            </div>
+
+            <!-- <button id="toggleRotation">Toggle Rotation</button> -->
           </div>
+        </div>
       </section>
     </main>
   </body>
