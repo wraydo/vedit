@@ -4,49 +4,49 @@ const arrOfSongs = [
   {
     id: 1,
     name: "New Hits Vol. 1",
-    img: "hits1.jpg",
+    img: "blackvinyl.webp",
     price: "$20.99",
     desc: "A collection of the latest chart-topping hits.",
   },
   {
     id: 2,
     name: "New Hits Vol. 2",
-    img: "hits2.jpg",
+    img: "macmillervinyl.webp",
     price: "$22.99",
     desc: "Another great collection of recent hits.",
   },
   {
     id: 3,
     name: "New Hits Vol. 3",
-    img: "hits3.jpg",
+    img: "slinttweezredmockvinyl.webp",
     price: "$19.99",
     desc: "Perfect for a relaxed evening.",
   },
   {
     id: 4,
     name: "New Hits Vol. 4",
-    img: "hits4.jpg",
+    img: "madonnavinyl.webp",
     price: "$24.99",
     desc: "Featuring the latest in pop and R&B.",
   },
   {
     id: 5,
     name: "New Hits Vol. 5",
-    img: "hits5.jpg",
+    img: "VinylPackaging.webp",
     price: "$21.99",
     desc: "An eclectic mix of various genres.",
   },
   {
     id: 6,
     name: "New Hits Vol. 6",
-    img: "hits6.jpg",
+    img: "VinylInC.jpg",
     price: "$23.99",
     desc: "Great for parties and celebrations.",
   },
   {
     id: 7,
     name: "New Hits Vol. 7",
-    img: "hits7.jpg",
+    img: "VinylMePlease.jpg",
     price: "$20.99",
     desc: "A must-have for music lovers.",
   },
@@ -59,7 +59,7 @@ function createCards() {
     columns.classList.add("col-md-4", "my-4");
 
     let createElement = document.createElement("div");
-    createElement.classList.add("card", "h-100");
+    createElement.classList.add("card", "h-75");
 
     let createCardHeader = document.createElement("div");
     createCardHeader.classList.add("card-header");
@@ -70,8 +70,8 @@ function createCards() {
   
 
     let mountainImage = document.createElement("img");
-    mountainImage.setAttribute("src", `images/${song.img}`);
-    mountainImage.classList.add("card-img-top");
+    mountainImage.setAttribute("src", song.img ? `images/${song.img}` : "No Image Here");
+    mountainImage.classList.add("card-img-top",);
   
 
     let createCardBody = document.createElement("div");
@@ -93,8 +93,16 @@ function createCards() {
     cardBodyTextThree.style.display = "none";
   
 
+    createElement.appendChild(createCardHeader);
+    createCardHeader.appendChild(createCardHeaderText);
+    createElement.appendChild(mountainImage);
+    createElement.appendChild(createCardBody);
+    createCardBody.appendChild(createCardBodyText);
+    createCardBody.appendChild(cardBodyTextTwo);
+      createCardBody.appendChild(cardBodyTextThree);
+
     let buttonForShow = document.createElement("button");
-    buttonForShow.classList.add("btn", "btn-primary", "w-25", "mb-3", "rounded-5", "ms-3");
+    buttonForShow.classList.add("btn", "btn-danger", "w-25", "mb-3", "rounded-5", "ms-3");
     buttonForShow.innerText = "Show";
     buttonForShow.addEventListener("click", () => {
       const isVisible = buttonForShow.innerText === "Hide";
@@ -105,13 +113,6 @@ function createCards() {
     });
     createElement.appendChild(buttonForShow);
 
-    createElement.appendChild(createCardHeader);
-    createCardHeader.appendChild(createCardHeaderText);
-    createElement.appendChild(mountainImage);
-    createElement.appendChild(createCardBody);
-    createCardBody.appendChild(createCardBodyText);
-    createCardBody.appendChild(cardBodyTextTwo);
-      createCardBody.appendChild(cardBodyTextThree);
 
     columns.appendChild(createElement);
     productsList.appendChild(columns);
