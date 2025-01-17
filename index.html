@@ -9,14 +9,24 @@
       header {
         background-image: url(images/VinylMePlease.jpg);
       }
+      header {
+        background-image: url(images/VinylMePlease.jpg);
+      }
+      .nav-link {
+        color: rgb(255, 255, 255) !important;
+      }
     </style>
   </head>
   <body>
-    <header class="container-fluid">
-      <div class="img-container">
+    <header class="container-fluid d-flex flex-column align-items-center">
+      <div class="img-container mb-3 mt-2">
         <img src="./images/logoipsum-311.svg" alt="" class="logo" />
       </div>
-      <ul class="nav nav-underline align-content-center">
+      <form class="d-flex justify-content-center w-100" role="search">
+        <input class="form-control w-25 me-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn bg-dark-subtle" type="submit">Search</button>
+      </form>
+      <ul class="nav nav-underline align-content-center justify-content-end mb-4">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="products.html" class="nav-link">Products</a></li>
         <li><a href="signin.html" class="nav-link">Sign In</a></li>
