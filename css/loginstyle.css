@@ -158,3 +158,18 @@ a {
   text-align: center;
   margin-top: 20px;
 }
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkbox-container input {
+  margin-right: 8px; /* Space between checkbox and label */
+}
+
+.checkbox-container label {
+  margin-bottom: 0; /* Ensures there is no bottom margin on the label */
+  font-size: 14px; /* Optional: Adjust label font size */
+  color: #333; /* Optional: Adjust text color */
+}
