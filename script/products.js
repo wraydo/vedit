@@ -215,9 +215,62 @@ function filteringGens() {
   let findingFast = genreFind.value;
   let sorting = arrOfSongs.filter((gens) => gens.genres === findingFast);
 
-  if (sorting.genres == findingFast.value) {
+
 for(let i = 0; i < sorting.length; i++){
-    
+if(sorting[i].genres === findingFast){
+    let columns = document.createElement("div");
+    columns.classList.add("col-md-4", "my-4");
+
+    let createElement = document.createElement("div");
+    createElement.classList.add("card", "h-75");
+
+    let createCardHeader = document.createElement("div");
+    createCardHeader.classList.add("card-header");
+
+    let createCardHeaderText = document.createElement("p");
+    createCardHeaderText.innerText = sorting[i].name;
+
+    let mountainImage = document.createElement("img");
+    mountainImage.setAttribute("src", song.img ? `images/${song.img}` : "No Image Here");
+    mountainImage.classList.add("card-img-top");
+
+    let createCardBody = document.createElement("div");
+    createCardBody.classList.add("card-body");
+
+    let createCardBodyText = document.createElement("p");
+    createCardBodyText.innerText = song.desc;
+    createCardBodyText.style.display = "none";
+
+    let cardBodyTextTwo = document.createElement("p");
+    cardBodyTextTwo.innerText = `Tags: ${song.tags.join(", ")}`;
+    cardBodyTextTwo.style.display = "none";
+
+    let cardBodyTextThree = document.createElement("p");
+    cardBodyTextThree.innerText = `Price: ${song.price}`;
+    cardBodyTextThree.style.display = "none";
+
+    createElement.appendChild(createCardHeader);
+    createCardHeader.appendChild(createCardHeaderText);
+    createElement.appendChild(mountainImage);
+    createElement.appendChild(createCardBody);
+    createCardBody.appendChild(createCardBodyText);
+    createCardBody.appendChild(cardBodyTextTwo);
+    createCardBody.appendChild(cardBodyTextThree);
+
+    let buttonForShow = document.createElement("button");
+    buttonForShow.classList.add("btn", "btn-danger", "w-25", "mb-3", "rounded-5", "ms-3");
+    buttonForShow.innerText = "Show";
+    buttonForShow.addEventListener("click", () => {
+      const isVisible = buttonForShow.innerText === "Hide";
+      buttonForShow.innerText = isVisible ? "Show" : "Hide";
+      createCardBodyText.style.display = isVisible ? "none" : "block";
+      cardBodyTextTwo.style.display = isVisible ? "none" : "block";
+      cardBodyTextThree.style.display = isVisible ? "none" : "block";
+    });
+    createElement.appendChild(buttonForShow);
+
+    columns.appendChild(createElement);
+    productsList.appendChild(columns);
 }
-  }
+}
 }
