@@ -214,7 +214,7 @@ pop();
 function filteringGens() {
   let findingFast = genreFind.value;
   let sorting = arrOfSongs.filter((gens) => gens.genres === findingFast);
-
+productsList.innerHTML = ""
 
 for(let i = 0; i < sorting.length; i++){
 if(sorting[i].genres === findingFast){
@@ -231,22 +231,22 @@ if(sorting[i].genres === findingFast){
     createCardHeaderText.innerText = sorting[i].name;
 
     let mountainImage = document.createElement("img");
-    mountainImage.setAttribute("src", song.img ? `images/${song.img}` : "No Image Here");
+    mountainImage.setAttribute("src", sorting[i].img ? `images/${sorting[i].img}` : "No Image Here");
     mountainImage.classList.add("card-img-top");
 
     let createCardBody = document.createElement("div");
     createCardBody.classList.add("card-body");
 
     let createCardBodyText = document.createElement("p");
-    createCardBodyText.innerText = song.desc;
+    createCardBodyText.innerText = sorting[i].desc;
     createCardBodyText.style.display = "none";
 
     let cardBodyTextTwo = document.createElement("p");
-    cardBodyTextTwo.innerText = `Tags: ${song.tags.join(", ")}`;
+    cardBodyTextTwo.innerText = `Tags: ${sorting[i].tags.join(", ")}`;
     cardBodyTextTwo.style.display = "none";
 
     let cardBodyTextThree = document.createElement("p");
-    cardBodyTextThree.innerText = `Price: ${song.price}`;
+    cardBodyTextThree.innerText = `Price: ${sorting[i].price}`;
     cardBodyTextThree.style.display = "none";
 
     createElement.appendChild(createCardHeader);
