@@ -1,0 +1,521 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+   
+    width: 100%;
+    height: 100px;
+display: flex;
+justify-content: space-between;
+}
+
+.albumImg{
+    position: relative;
+    display: block;
+    margin: 40px auto;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+    animation-play-state: paused;
+}
+
+.albumImg.play{
+    animation-play-state: running;
+}
+
+  #loop.change {
+    background: skyblue;
+  }
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+@keyframes sideToSide {
+    0%{
+        background-position: 0% 50%;
+    } 
+    
+    50% {
+    background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.left{
+    
+   display: flex;
+   align-items: center;
+    width: 50%;
+background: rgb(0, 0, 0);
+height: 100vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+#title, #artist, #currentSong, #slash, #total, .volumeChange, .volumeDisplay1{
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.split1:hover #title, .split1:hover #artist,.split1:hover #currentSong,.split1:hover #slash,.split1:hover #total,.split1:hover .volumeChange, .split1:hover .volumeDisplay1 {
+    display: flex;
+    opacity: 1;
+}
+
+
+    
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#exclamation{
+    
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 60%;
+    background: transparent;
+    border: 1px solid black;
+    
+    visibility: hidden;
+}
+
+.split1:hover #exclamation{
+    visibility: visible;
+    cursor: pointer;
+}
+
+
+/* .split1{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  flex-direction: column;
+    background: white;
+    width: 500px;
+    height: 100vh;
+} */
+
+div{
+    flex: 1;
+    transition: all .5s;
+}
+
+div:hover{
+    flex: 3;
+}
+
+.right{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    /* background: red; */
+
+}
+
+/* 
+.right2{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url("img/kingfish.jpg");
+} */
+
+/* .rightBg{
+    width: 100%;
+    height: 100%;
+} */
+
+
+
+.buttonClass{
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: 20px;
+justify-content: center;
+align-items: center;
+
+}
+
+
+.buttonClass button{
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 60%;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.buttonClass button:hover{
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid black;
+    border-radius: 60%;
+    
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.toast1{
+    position: fixed;
+    top: 20px;
+    left: -100%;
+    width: 160px;
+    height: 85px;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease, left .3s ease, visibility .3s;
+}
+
+.notifyMe {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.musicNote {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: block;
+}
+
+.musicNote.displayMusicNote{
+    opacity: 1;
+}
+
+
+.notifyMe.displayUpdate{
+    opacity: 1;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+.toast1.show1{
+    opacity: 1;
+    left: 900px;
+}
+
+.split1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    /* text-align: center; */
+    font-family: Arial, sans-serif;
+    height: 700px;
+
+} 
+
+.split1:hover{
+background-color: rgba(255, 255, 255, 1);
+}
+
+.split1 p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+#title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#artist {
+    font-style: italic;
+    font-size: 16px;
+}
+
+.duration{
+    width: 60%;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+.songTracker p{
+    /* position: absolute;
+    top: 100px;
+    left: 100px;
+    background: white; */
+}
+
+.buttonClass-mobile{
+    display: none;
+}
+
+.trackInfo{
+    display: flex;
+    flex-direction: row;
+}
+
+.durationBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 330px;
+    
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* Prevents scrolling */
+    }
+
+    body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    }
+
+    #container{
+    height: auto;
+    }
+
+    .left{
+        display: flex;
+        position: relative;
+        align-items: center;
+         width: 100vw;
+     background: rgb(0, 0, 0);
+     height: 100vh;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+     }
+
+     .buttonClass{
+        display: none;
+     }
+    
+    .right{
+       display: none;
+    
+    }
+
+    .buttonClass-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Adjust the margin as needed */
+    }
+
+    .buttonClass-mobile button {
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 60%;
+        margin: 5px;
+        border: none;
+        cursor: pointer;
+        transition: 0.4s;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .split1 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10px auto;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 350px;
+        font-family: Arial, sans-serif;
+        height: 650px;
+    }
+
+    .albumImg {
+        display: flex;
+        position: relative;
+        margin: 60 auto; /* Adjust the margin as needed */
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        animation: rotate 20s linear infinite;
+        animation-play-state: paused;
+    }
+
+    .duration{
+       
+        top: 520px;
+        width: 60%;
+        cursor: pointer;
+        outline: none;
+        
+    }
+
+    .toast {
+        position: fixed;
+        opacity: 0;
+        bottom: 785px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .notifyMe {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .musicNote {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        display: block;
+    }
+    
+    .musicNote.displayMusicNote{
+        opacity: 1;
+    }
+    
+    
+    .notifyMe.displayUpdate{
+        opacity: 1;
+    }
+    
+    .toast.show {
+        opacity: 1;
+    }
+
+    .toast1.show1{
+        opacity: 1;
+        left: 200px;
+    }
+
+    .durationBlock{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 300px;
+    }
+
+   .volumeChange{
+    display: none;
+   }
+
+   .volumeDisplay1{
+    display: none;
+   }
+    
+   #exclamation{
+
+   }
+
+    #title,  #artist, #currentSong, #slash, #total {
+    display: flex;
+    opacity: 1;
+}
+}
+
+
