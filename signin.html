@@ -3,12 +3,23 @@
   <head>
     <link rel="stylesheet" href="./css/bootstrap.css" />
     <link rel="stylesheet" href="./css/loginstyle.css" />
-
     <title>Vinyl123</title>
     <style>
       header {
         background-image: url(images/VinylMePlease.jpg);
       }
+<<<<<<< HEAD
+
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .checkbox-container input {
+        margin-right: 8px; /* Reduces space between checkbox and label */
+      }
+=======
       .wave-menu {
   border: 4px solid #030303;
   border-radius: 50px;
@@ -124,6 +135,7 @@
     transform: scaleY(0.5);
   }
 }
+>>>>>>> 860f5813b2291d83b800e64c3f62dcbbcdd2b3c0
     </style>
   </head>
   <body>
@@ -146,29 +158,55 @@
       </div> -->
     </header>
 
-    <section class="container d-flex justify-content-center">
-      <form action="action_page.php">
-        <div class="card" style="width: 28rem;">
-          <h1>Sign In</h1>
-          <p>Sign into your account</p>
+    <section class="container d-flex justify-content-center align-items-center vh-100">
+      <form action="action_page.php" class="w-100" style="max-width: 400px;">
+        <div class="card p-4">
+          <h1 class="text-center">Sign In</h1>
+          <p class="text-center">Sign into your account</p>
           <hr />
 
-          <label for="email" ><b>Email</b></label>
-          <input  type="text" placeholder="Enter Email" name="email" id="email" class="formr" required />
+          <div class="mb-3">
+            <label for="email" class="form-label"><b>Email</b></label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Email"
+              name="email"
+              id="email"
+              required
+            />
+          </div>
 
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" id="psw" class="formx" required />
+          <div class="mb-3">
+            <label for="psw" class="form-label"><b>Password</b></label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Enter Password"
+              name="psw"
+              id="psw"
+              required
+            />
+          </div>
+
+          <!-- Remember Me Checkbox -->
+          <div class="checkbox-container">
+            <input type="checkbox" id="remember" name="remember" />
+
+            <label for="remember" class="form-label">Remember Me</label>
+          </div>
 
           <hr />
-
-          <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-          <button type="submit" class="registerbtn formd">Sign In</button>
+          <p class="small">By creating an account, you agree to our <a href="#">Terms & Conditions</a>.</p>
+          
+          <button disabled type="submit" class="btn btn-primary w-100" id="signInBtn">Sign In</button>
         </div>
 
-        <div class="container signin">
+        <div class="container text-center mt-3">
           <p>Don't have an account? <a href="signup.html">Sign Up</a>.</p>
         </div>
       </form>
     </section>
+    <script src="signin.js"></script>
   </body>
 </html>
